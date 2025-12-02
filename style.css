@@ -1,0 +1,121 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f1f3f6;
+    display: flex;
+}
+
+/* ============================
+   SIDEBAR
+============================ */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #0d47a1;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    margin: 8px;
+    background: #1565c0;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover animation */
+.sidebar ul li:hover {
+    background: #1e73be;
+    transform: scale(1.03);
+}
+
+/* Active button */
+.sidebar ul li.active {
+    background: #ffc107;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* ============================
+   MAIN CONTENT
+============================ */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* ============================
+   STUDENT TABLE
+============================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th {
+    background: #0d47a1;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards {
+        flex-direction: column;
+        width: 100%;
+    }
+}
